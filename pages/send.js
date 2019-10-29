@@ -11,7 +11,7 @@ const Send = props => {
             {props.shows.map(show => (
               <li key={show.id}>
                 <Link href="/" as={`${show.id}`}>
-                  <a>{show.Name}</a>
+                  <a>{show.name}</a>
                 </Link>
               </li>
             ))}
