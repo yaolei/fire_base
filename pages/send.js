@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 const Send = props => {
@@ -11,7 +10,7 @@ const Send = props => {
             {props.shows.map(show => (
               <li key={show.id}>
                 <Link href="/" as={`${show.id}`}>
-                  <a>{show.name}</a>
+                  <a>{show.name} and password : {show.password}</a>
                 </Link>
               </li>
             ))}
@@ -22,8 +21,7 @@ const Send = props => {
 }
 
 Send.getInitialProps = async function() {
-  debugger
-  const res = await fetch('http://localhost:3002/send')
+  const res = await fetch('http://localhost/send')
   const data = await res.json()
   console.log(`Show data fetched. Count: ${data}`)
   return {
