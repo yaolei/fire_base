@@ -7,7 +7,7 @@ const Post = () => {
   return (
         <div>
         <Link href="/">
-           <a> Back to home </a>
+           <a> Back to home2 </a>
         </Link>
         {'   '}Next{'  '}
         <Link href="/send" as="/send">

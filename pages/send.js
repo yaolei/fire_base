@@ -21,7 +21,7 @@ const Send = props => {
 }
 
 Send.getInitialProps = async function() {
-  const res = await fetch('http://localhost/send')
+  const res = await fetch('/send')
   const data = await res.json()
   console.log(`Show data fetched. Count: ${data}`)
   return {
