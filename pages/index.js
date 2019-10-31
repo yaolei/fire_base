@@ -1,5 +1,6 @@
 import Link from 'next/link'
-
+import {Button} from 'antd'
+import React, {Fragment} from 'react'
 // HomePage.getInitialProps = async ({ req, query }) => {
   // const protocol = req
   //   ? `${req.headers['x-forwarded-proto']}:`
@@ -30,6 +31,9 @@ function Home() {
       </Link>{' '}
       to read more
         {' '}
+        <Link href="/">
+            <Button type='primary'>用户列表页</Button>
+        </Link>
     </div>
   )
 }
